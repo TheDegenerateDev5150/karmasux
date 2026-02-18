@@ -7,6 +7,7 @@
   "timezone": "UTC",
   "automerge": false,
   "platformAutomerge": false,
+  "allowedPostUpgradeCommands": ["^npm ci && npm test -- -u$"],
   "packageRules": [
     {
       "description": "Require dashboard approval for major updates",
@@ -24,6 +25,15 @@
       "matchDatasources": ["npm"],
       "matchPackageNames": ["/^bootstrap$/", "/^bootswatch$/"],
       "groupName": "bootstrap"
+    },
+    {
+      "description": "Update snapshots after npm upgrades",
+      "matchManagers": ["npm"],
+      "postUpgradeTasks": {
+        "commands": ["npm ci && npm test -- -u"],
+        "fileFilters": ["ui/src/**/__snapshots__/**"],
+        "executionMode": "branch"
+      }
     },
     {
       "description": "GitHub Actions",

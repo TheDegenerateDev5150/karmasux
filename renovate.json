@@ -9,6 +9,11 @@
   "platformAutomerge": false,
   "packageRules": [
     {
+      "description": "Require dashboard approval for major updates",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    },
+    {
       "description": "Docker base images",
       "matchDatasources": ["docker"],
       "matchPackageNames": ["/^debian$/", "/^node$/", "/^golang$/"],

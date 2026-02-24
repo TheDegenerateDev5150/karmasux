@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.123
+
+### Changed
+
+Updated react to v19.
+
 ## v0.122
 
 ### Changed

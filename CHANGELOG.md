@@ -1,10 +1,16 @@
 # Changelog
 
+## v0.124
+
+### Changed
+
+- No changes in this release, only fixes for the release process. 
+
 ## v0.123
 
 ### Changed
 
-Updated react to v19.
+- Updated react to v19.
 
 ## v0.122
 
